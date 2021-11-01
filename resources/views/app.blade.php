@@ -8,7 +8,7 @@
 </head>
 <body>
     <ul>
-        @foreach($tasks as $kay)
+        @foreach($tasks as $kay=>$task)
         <li><a href="{{'/show' . $kay}}">{{$kay}}</a></li>
         @endforeach
     </ul>

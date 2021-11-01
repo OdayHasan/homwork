@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>{{echo $task}}</h1>
+    <h1><?php echo $taski; ?></h1>
+    <h1><?php echo $id; ?></h1>
 </body>
 </html>

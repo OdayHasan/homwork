@@ -18,21 +18,22 @@ Route::get('/', function () {
 });
 Route::get('/app',function(){
     $tasks=[
-        'Task-1' => 'Task val',
-        'Task-2' => 'Task val',
-        'Task-3' => 'Task val'
+        'Task-1' => '1',
+        'Task-2' => '2', 
+        'Task-3' => '3'
+        
     ];
 
     return view('app',compact('tasks'));
 
 });
-Route::get('/show[id]',function($id){
+Route::get('/show{id}',function($id){
     $tasks=[
-        'Task-1' => 'Task val',
-        'Task-2' => 'Task val',
-        'Task-3' => 'Task val'
+        'Task-1' => '1',
+        'Task-2' => '2',
+        'Task-3' => '3'
     ];
-    $task = $tasks[$id];
-    return view('show',compact('task'));
+    $taski = $tasks[$id];
+    return view('show',compact('taski','id'));
 
 });
